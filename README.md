@@ -2,9 +2,27 @@
 
 Test repo and website for pub-server persistent sessions and google-oauth.
 
-To deploy on [fly.io](https://fly.io/) with manual start/stop
+- Sessions are persisted in redis,
+- Browser sends url to be stored with session log.
+- Server can be stopped and restarted without losing session.
 
-1. change name in fly.toml
+
+
+### To deploy locally
+
+1. Clone this repo and `pnpm install`.
+1. Install a remotely managed [cloudflare tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/configure-tunnels/remote-management/) with a public hostname routing to service HTTP://localhost:3001.
+2. Install redis e.g. with `brew install redis`
+3. Create `.env` file with your [google oauth2](https://console.cloud.google.com/apis/credentials) credentials
+
+```sh
+$ source ./.env
+$ pnpm start
+```
+
+### To deploy on [fly.io](https://fly.io/) with manual start/stop
+
+1. change name in fly.toml and create app with `fly launch`
 2. create `.env` and `.fly-secrets` and make executable with chmod +x
 3. run in order
 
