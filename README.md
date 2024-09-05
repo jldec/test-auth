@@ -2,9 +2,19 @@
 
 Test repo and website for pub-server persistent sessions and google-oauth.
 
-Deployed on [fly.io](https://fly.io/) with manual start/stop.
+To deploy on [fly.io](https://fly.io/) with manual start/stop
 
-### .env
+1. change name in fly.toml
+2. create `.env` and `.fly-secrets` and make executable with chmod +x
+3. run in order
+
+```sh
+$ source ./.env
+$ ./.fly-secrets
+$ fly deploy
+```
+
+#### .env
 ```sh
 # see fly.toml
 # APP=https://test-auth.fly.dev = fly.io endpoint, internal port 3000
@@ -37,17 +47,17 @@ echo 'auth credentials set'
 echo 'run ./.fly-secrets to update secrets on fly.io.'
 ```
 
-### .fly-secrets
+#### .fly-secrets
 ```sh
 #!/bin/bash
 
 # fly secrets
-fly secrets set GCS=$GID --stage
+fly secrets set GID=$GID --stage
 fly secrets set GCS=$GCS --stage
 fly secrets set SSC=$SSC --stage
-fly secrets set RCA=$ACL_ADMIN --stage
-fly secrets set RCA=$_RCS --stage
-fly secrets set RCA=$_RCP --stage
-fly secrets set RCA=$_RCH --stage
+fly secrets set ACL_ADMIN=$ACL_ADMIN --stage
+fly secrets set RCS=$_RCS --stage
+fly secrets set RCP=$_RCP --stage
+fly secrets set RCH=$_RCH --stage
 fly secrets set RCA=$_RCA --stage
 ```
