@@ -70,13 +70,13 @@ echo 'run ./.fly-secrets to update secrets on fly.io.'
 ```sh
 #!/bin/bash
 
-# fly secrets
-fly secrets set GID=$GID --stage
-fly secrets set GCS=$GCS --stage
-fly secrets set SSC=$SSC --stage
-fly secrets set ACL_ADMIN=$ACL_ADMIN --stage
-fly secrets set RCS=$_RCS --stage
-fly secrets set RCP=$_RCP --stage
-fly secrets set RCH=$_RCH --stage
-fly secrets set RCA=$_RCA --stage
+fly secrets set --stage \
+GID=$GID \
+GCS=$GCS \
+SSC=$SSC \
+ACL_ADMIN=$ACL_ADMIN \
+RCS=$_RCS \
+RCP=$_RCP \
+RCH=$_RCH \
+RCA=$_RCA
 ```
