@@ -2,11 +2,12 @@
 
 Test repo and website for pub-server persistent sessions and google-oauth.
 
-- Sessions are persisted in redis,
-- Browser sends url to be stored with session log.
+- Access restricted to known emails, authenticated using google oauth
+- Sessions maintained with a rolling 1-hour cookie, persisted in redis,
+- Browser sends urls on nav, stored with offset (in seconds) in session log.
 - Server can be stopped and restarted without losing session.
 
-
+![Screenshot 2024-09-05 at 10 29 59](https://github.com/user-attachments/assets/61397bc2-c0e3-4dc7-aea4-f0dd803b76b6)
 
 ### To deploy locally
 
