@@ -1,0 +1,21 @@
+{
+  "name": "pub-test-auth",
+  "version": "0.0.1",
+  "description": "standalone pub-pkg-google-oauth test",
+  "main": "pub-config.js",
+  "dependencies": {
+    "pub-server": "^2.13.0"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jldec/pub-test-auth.git"
+  },
+  "scripts": {
+    "start": "pub"
+  },
+  "author": "Jürgen Leschner",
+  "license": "MIT"
+}

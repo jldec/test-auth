@@ -1,0 +1,10 @@
+# WARNING .gitignore should mirror this file!! WARNING
+
+node_modules
+yarn.lock
+env
+.env
+fly-secrets
+.fly-secrets
+
+# WARNING .gitignore should mirror this file!! WARNING

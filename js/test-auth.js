@@ -1,0 +1,1 @@
+fetch('/server/log' + location.pathname + (location.search || ''), { method:'POST'});

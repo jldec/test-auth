@@ -1,0 +1,10 @@
+# WARNING .dockerignore should mirror this file!! WARNING
+
+node_modules
+yarn.lock
+env
+.env
+fly-secrets
+.fly-secrets
+
+# WARNING .dockerignore should mirror this file!! WARNING
