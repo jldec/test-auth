@@ -24,8 +24,8 @@ $ pnpm start
 ### To deploy on [fly.io](https://fly.io/) with manual start/stop
 
 1. change name in fly.toml and create app with `fly launch`
-2. create `.env` and `.fly-secrets` and make executable with chmod +x
-3. run in order
+2. create redis DB e.g. on [upstash](https://console.upstash.com/redis)
+3. create `.env` and `.fly-secrets` and make executable with chmod +x, then run:
 
 ```sh
 $ source ./.env
